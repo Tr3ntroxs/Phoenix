@@ -1,0 +1,14 @@
+February 3rd, 2022:
+
+- Created thumb model
+- Started palm model
+- Put together assembly of entire hand
+
+Link:
+https://cad.onshape.com/documents/96d875bf46dff56dd5444c32/w/6ed33167ab82f3a660f521c9/e/e0852d6c11f261c2afaa4456?renderMode=0&uiState=63ddd3e4158fca07c50ae3f9
+
+Design notes:
+- Bottom segment of fingers will only be able to rotate roughly 20 degrees up.
+This will operate as a good hardstop, so I will look to put rubber padding/stops
+in between.
+- Parts with holes might need to be printed on side.
