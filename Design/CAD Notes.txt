@@ -40,3 +40,14 @@ Design notes:
 - I need to start doing interior design inside the palm
 - Looking at the fingers themselves, a spring mechanism might help to keep
 them from clasping inside
+
+March 3rd, 2022:
+
+Link:
+https://cad.onshape.com/documents/96d875bf46dff56dd5444c32/w/6ed33167ab82f3a660f521c9/e/e5734e374defbcc0d33a5eee?renderMode=0&uiState=63eb12d5d716de34f7863a37
+
+
+COMPLETED CAD!!!
+- Added hinged plexiglass layer to palm for view of inside
+- Palm size optimized for intended electronics
+- Mounts added for other electronics such as the screen
