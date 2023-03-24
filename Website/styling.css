@@ -27,7 +27,8 @@ html {
 }
 
 .logo{
-  width: 120px;
+  width: 25%;
+  height: 25%;
   cursor: pointer;
 }
 
@@ -97,3 +98,38 @@ button{
   height: 1.25em;
   width: 1.25em;
 }
+/*
+.test_button{
+  width:200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #a42e00;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+span{
+  background: #a42e00;
+  height: 50%;
+  width: 50%;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span{
+  width: 100%;
+}
+
+button:hover{
+  border: none;
+}*/
