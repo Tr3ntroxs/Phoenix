@@ -192,7 +192,7 @@ button:hover{
 .footer{
   width: 100vw;
   height: 180px;
-  background-color: #343434;
+  background-color: #1b1b1b;
   display: flex;
   justify-content: center;
 }
@@ -213,6 +213,16 @@ button:hover{
   letter-spacing: 8px;
 }
 
+.footer-item h3::after{
+  content: '';
+  height: 0.5px;
+  width: 80%;
+  background: #ffffff;
+  position: absolute;
+  left: 5%;
+  bottom: 10px;
+}
+
 .footer-col ul li{
   margin: 12px 0;
   list-style: none;
@@ -225,19 +235,33 @@ button:hover{
   font-size: 10px;
   color:floralwhite;
   text-decoration: none;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .footer-col ul li a:hover{
   font-size: 12px;
   color:crimson;
   text-decoration: none;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   transition: 0.4s;
 }
 
 .footer-col ul li a{
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+/* 
+@-webkit-keyframes circle{
+  0% {size: 0%;}
+  100% {size: 200%;}
+} */
 
+.footer-col button:hover{
+  background-color: rgb(174, 0, 174);
+  transition: 0.3s;
+}
+
+.footer-col button{
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
