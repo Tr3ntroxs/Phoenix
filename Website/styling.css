@@ -93,6 +93,11 @@ input.search-bar{
   color: rgba(153, 0, 0, 0.75);
 }
 
+.content h2{
+  font-size: 35px;
+  color: crimson;
+}
+
 button{
   margin: 0.5em;
   border-radius: 50%;
@@ -135,9 +140,14 @@ button:hover{
   border: none;
 }*/
 
+.img-container h2{
+  font-size: 18px;
+  
+}
+
 .slider-frame{
   overflow: hidden;
-  height: 800px;
+  height: 420px;
   width: 1200px;
   margin-left: 360px;
 }
@@ -160,7 +170,7 @@ button:hover{
 
 .slide-images{
   width: 3600px;
-  height: 800px;
+  height: 420px;
   margin: 0 0 0 -2400px;
   position: relative;
   -webkit-animation-name: slide_animation;
@@ -175,4 +185,59 @@ button:hover{
   width: 1200px;
   position: relative;
   float: left;
+}
+
+/*---End of Slide Animation---*/
+
+.footer{
+  width: 100vw;
+  height: 180px;
+  background-color: #343434;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content{
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-item h3{
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: whitesmoke;
+  margin-top: 12px;
+  position: relative;
+  letter-spacing: 8px;
+}
+
+.footer-col ul li{
+  margin: 12px 0;
+  list-style: none;
+  position: relative;
+  font-size: 10px;
+  color:floralwhite;
+}
+
+.footer-col ul li a{
+  font-size: 10px;
+  color:floralwhite;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+.footer-col ul li a:hover{
+  font-size: 12px;
+  color:crimson;
+  text-decoration: none;
+  letter-spacing: 6px;
+  transition: 0.4s;
+}
+
+.footer-col ul li a{
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+
 }
