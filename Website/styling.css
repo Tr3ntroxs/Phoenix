@@ -152,7 +152,7 @@ button:hover{
   margin-left: 360px;
 }
 
-/*---Slide Animation---*/
+/*--- Slideshow ---*/
 
 @-webkit-keyframes slide_animation{
   0% {left: 0px;}
@@ -173,11 +173,11 @@ button:hover{
   height: 420px;
   margin: 0 0 0 -2400px;
   position: relative;
-  -webkit-animation-name: slide_animation;
+  /* -webkit-animation-name: slide_animation;
   -webkit-animation-duration: 33s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-  -webkit-animation-play-state: running;
+  -webkit-animation-play-state: running; */
 }
 
 .img-container{
@@ -187,7 +187,44 @@ button:hover{
   float: left;
 }
 
-/*---End of Slide Animation---*/
+#r1:checked ~ .img-container{
+  margin-left: 0;
+}
+
+#r2:checked ~ .img-container{
+  margin-left: -50%;
+}
+
+#r3:checked ~ .img-container{
+  margin-left: -100%;
+}
+
+.navigation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-30%);
+  display: flex;
+}
+
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.bar:hover{
+  background: #fff;
+}
+
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+/*---End of Slideshow ---*/
 
 .footer{
   width: 100vw;
