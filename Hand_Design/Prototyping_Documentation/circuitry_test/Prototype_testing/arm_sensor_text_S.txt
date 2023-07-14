@@ -1,0 +1,9 @@
+The arm sensor tests involved placing the sensor on different parts of the arm to measure its accuracy in capturing readings. Here's a further explanation of the tests and their results:
+
+    On the Wrist: This test showed that the sensor picks up readings well for all fingers. The wrist is often considered an optimal location for wearable sensors due to its proximity to blood vessels and ease of access. The sensor's placement on the wrist yielded accurate results, indicating that it is capable of capturing reliable readings in this position.
+
+    On the Forearm: The second test involved placing the sensor on the forearm. The results showed that the readings obtained from this location were less accurate compared to the wrist. This could be due to the forearm having fewer blood vessels and being farther from the heart, resulting in slightly reduced accuracy. While the forearm can still provide useful readings, it may not be as precise as the wrist.
+
+    On the Bicep: In the third test, the sensor was positioned on the bicep. The readings obtained from this location were more accurate than the forearm but not as reliable as the wrist. The bicep is farther away from the heart compared to the wrist, which may lead to slightly reduced accuracy. However, the readings obtained from the bicep can still provide valuable insights, although they may not be as precise as those from the wrist.
+
+In summary, the wrist proved to be the most accurate and reliable location for capturing sensor readings. The forearm and bicep showed varying levels of accuracy, with the forearm being less accurate and the bicep falling in between the forearm and wrist. These findings suggest that for optimal results, it is preferable to place the sensor on the wrist whenever possible. However, if the wrist is not accessible or suitable, the forearm or bicep can still provide useful readings, albeit with slightly reduced accuracy.
