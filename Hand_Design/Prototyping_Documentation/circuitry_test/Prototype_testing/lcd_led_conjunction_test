@@ -1,12 +1,14 @@
 #include <LiquidCrystal.h>
 
 /*
-GND
-5.5V
+https://www.youtube.com/watch?v=IM3d0dlAOJk is the original link I used, with a few changes.
+5.5V to +
+GND1 to -
 VSS parallel to GND1
 VDD parallel to 5.5V
 V0 in pin 13
 RS in pin 12
+RW parallel to negative ground
 E in pin 11
 D4 in pin 4
 D5 in pin 5
@@ -14,6 +16,8 @@ D6 in pin 6
 D7 in pin 7
 LED- to GND2
 LED+ to pin 8
+A to positive ground
+K to negative ground
 */
 
 int contrast = 100;
