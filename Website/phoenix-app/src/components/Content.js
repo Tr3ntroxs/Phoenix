@@ -1,17 +1,33 @@
 import React from 'react';
-import '../App.css';
+import '../Content.css';
+import arduino from '../arduino.jpg'
+import cad from '../CAD_example.png'
+import sensor from '../sensor.jpg'
 
 const Content = () => {
   return (
     <div className="content">
-      <h1>Second Chances</h1>
-      <p>Powered by Arduino ELEGOO and designed through Onshape, <br /> Phoenix will lend more than just a hand...</p>
-      
-      <div className="slider-frame">
-        {/* The rest of the slideshow content */}
+      <div>
+        <h1>Second Chances</h1>
+        <p>Powered by Arduino ELEGOO and designed through Onshape, <br /> Phoenix will lend more than just a hand...</p>
       </div>
-      {/* <h2>What is Our Goal?</h2>
-      <p>Phoenix Bionics aims to create an affordable yet efficient bionic hand, with a slew of features <br /> such as swappable design plates, interactive mechanics, and more! */}
+    
+      <div className="slider-frame">
+        <div class="slide-images">
+          <div class="img-container s1">
+            <h2>Powered by Arduino</h2>
+            <img src={arduino} alt={"arduino"} />
+          </div>
+          <div class="img-container s2">
+            <h2>How OnShape was Utilized</h2>
+            <img src={cad} alt={"CAD"} />
+          </div>
+          <div class="img-container s3">
+            <h2>How does a Piezoelectric Sensor work?</h2>
+            <img src={sensor} alt={"sensor"} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

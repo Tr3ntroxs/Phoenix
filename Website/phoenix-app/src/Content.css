@@ -1,0 +1,30 @@
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    margin-top: 300px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 55px;
+    margin-top: 80px;
+    color: crimson;
+}
+
+p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 30px;
+    color: rgba(153, 0, 0, 0.75);
+    font-size: 16pt;
+}
+
+.slider-frame {
+    width: 1200px;
+    height: 420px;
+    overflow: hidden;
+}
