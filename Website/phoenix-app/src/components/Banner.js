@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../Banner.css';
+import logo from '../logo_clear.png'; // Adjust the path based on the file structure
 const Banner = () => {
   return (
     <div className="banner">
       <div className="submenus">
-      <img src="logo_clear.png" className="logo" alt="" />
+      <img src={logo} className="logo" alt="" />
 
         <ul>
           <li><a href="#">Home</a></li>

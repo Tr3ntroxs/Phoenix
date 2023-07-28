@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Footer.css';
 
 const Footer = () => {
   return (
@@ -22,23 +23,18 @@ const Footer = () => {
               <li><a href="#">Our Project</a></li>
               <li><a href="#">Team Members</a></li>
               <li><a href="#">FAQ</a></li>
-              <li><a href="#"></a></li>
             </ul>
           </div>
         </div>
         <div className="footer-item">
           <h3>Socials</h3>
           <div className="footer-col">
-            <div>
-              <a href="https://github.com/Tr3ntroxs/HandiCraft"><button type="button"><svg viewBox="0 0 1024 1024" fill="currentColor" height="1em" width="1em">
-                {/* The rest of the social icon */}
-              </svg></button></a>
-              <a href="https://cad.onshape.com/documents/96d875bf46dff56dd5444c32/w/6ed33167ab82f3a660f521c9/e/e5734e374defbcc0d33a5eee"><button type="button">
-                <svg viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em">
-                  {/* The rest of the social icon */}
-                </svg>
-              </button></a>
-            </div>
+            <a href="https://github.com/Tr3ntroxs/HandiCraft">
+              <button type="button">Github</button>
+            </a>
+            <a href="https://cad.onshape.com/documents/96d875bf46dff56dd5444c32/w/6ed33167ab82f3a660f521c9/e/e5734e374defbcc0d33a5eee">
+              <button type="button">Onshape</button>
+            </a>
           </div>
         </div>
       </div>
