@@ -1,0 +1,69 @@
+/* Banner-specific styles */
+.banner {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .submenus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+  }
+  
+  a:hover {
+    color: #ff0000;
+  }
+  
+  .search-bar {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+  
+  .night button {
+    background-color: #333;
+  }
+  
+  /* Additional styles for night mode */
+  .night {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  

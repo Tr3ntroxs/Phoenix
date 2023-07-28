@@ -1,10 +1,12 @@
 import React from 'react';
-
+import ReactDOM from 'react-dom';
+import '../Banner.css';
 const Banner = () => {
   return (
     <div className="banner">
       <div className="submenus">
-        <img src="logo_clear.png" className="logo" />
+      <img src="logo_clear.png" className="logo" alt="" />
+
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Browse</a></li>
