@@ -1,8 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import '../Banner.css';
 import logo from '../logo_clear.png'; // Adjust the path based on the file structure
 const Banner = () => {
+  const [userAnswer, setUserAnswer] = useState('');
+  const [allAnswers, setAllAnswers] = useState([]);
+  
+  const handleUserAnswer = () => {
+    if (userAnswer.trim() !== '') {
+      fetch('http://localhost:3001/api/answers', {
+  // .., {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ answer: userAnswer }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok.');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data); // Optional: Log the response from the backend
+          setAllAnswers((prevAnswers) => [...prevAnswers, userAnswer]);
+          setUserAnswer('');
+        })
+        .catch((error) => {
+          console.error('Error:', error.message);
+        });
+    } else {
+      console.log('Error: Answer cannot be empty.');
+    }
+  };
+  
+  
+  
+
   return (
     <div className="banner">
       <div className="submenus">
@@ -16,7 +51,15 @@ const Banner = () => {
           <li><a href="#">Account</a></li>
         </ul>
         <div className="search">
-          <input type="text" className="search-bar" placeholder="Got a question?" />
+        <input
+        type="text"
+        className="search-bar"
+        placeholder="Got a question?"
+        value={userAnswer}
+        onChange={(e) => setUserAnswer(e.target.value)}
+      />
+      <button onClick={handleUserAnswer}>Submit</button>
+
           <button>
             <svg viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em">
               <path fill="none" d="M0 0h24v24H0z" />
