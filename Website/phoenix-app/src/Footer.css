@@ -3,6 +3,8 @@
     color: #fff;
     padding: 20px;
     text-align: center; /* Center the content horizontally */
+    position: relative;
+    transform: translateY(200%);
   }
   
   .footer-content {
