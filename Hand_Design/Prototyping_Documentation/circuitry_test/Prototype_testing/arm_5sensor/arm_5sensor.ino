@@ -61,13 +61,11 @@ void loop() {
 
   // Control servo1 based on the voltage reading
   if (currentVoltage > voltageThreshold && !servo1Activated) {
-    Serial.println("Servo 1: CONTRACTION!");
     digitalWrite(onboardLED, HIGH);
-    int servoAngle1 = map(currentVoltage, voltageThreshold, 1023, servoMin1, servoMax1);
+    int servoAngle1 = map(currentVoltage, 0, 1023, servoMin1, servoMax1);
     myServo1.write(servoAngle1);
     servo1Activated = true;
   } else if (currentVoltage <= voltageThreshold && servo1Activated) {
-    Serial.println("Servo 1: RELEASE!");
     digitalWrite(onboardLED, LOW);
     myServo1.write(servoMin1);
     servo1Activated = false;
@@ -75,13 +73,11 @@ void loop() {
 
   // Control servo2 based on the voltage reading
   if (currentVoltage > voltageThreshold && !servo2Activated) {
-    Serial.println("Servo 2: CONTRACTION!");
     digitalWrite(onboardLED, HIGH);
-    int servoAngle2 = map(currentVoltage, voltageThreshold, 1023, servoMin2, servoMax2);
+    int servoAngle2 = map(currentVoltage, 0, 1023, servoMin2, servoMax2);
     myServo2.write(servoAngle2);
     servo2Activated = true;
   } else if (currentVoltage <= voltageThreshold && servo2Activated) {
-    Serial.println("Servo 2: RELEASE!");
     digitalWrite(onboardLED, LOW);
     myServo2.write(servoMin2);
     servo2Activated = false;
@@ -89,13 +85,11 @@ void loop() {
 
   // Control servo3 based on the voltage reading
    if (currentVoltage > voltageThreshold && !servo3Activated) {
-    Serial.println("Servo 3: CONTRACTION!");
     digitalWrite(onboardLED, HIGH);
-    int servoAngle3 = map(currentVoltage, voltageThreshold, 1023, servoMin3, servoMax3);
+    int servoAngle3 = map(currentVoltage, 0, 1023, servoMin3, servoMax3);
     myServo3.write(servoAngle3);
     servo3Activated = true;
   } else if (currentVoltage <= voltageThreshold && servo3Activated) {
-    Serial.println("Servo 3: RELEASE!");
     digitalWrite(onboardLED, LOW);
     myServo3.write(servoMin3);
     servo3Activated = false;
@@ -103,13 +97,11 @@ void loop() {
 
   // Control servo4 based on the voltage reading
   if (currentVoltage > voltageThreshold && !servo4Activated) {
-    Serial.println("Servo 4: CONTRACTION!");
     digitalWrite(onboardLED, HIGH);
-    int servoAngle4 = map(currentVoltage, voltageThreshold, 1023, servoMin4, servoMax4);
+    int servoAngle4 = map(currentVoltage, 0, 1023, servoMin4, servoMax4);
     myServo4.write(servoAngle4);
     servo4Activated = true;
   } else if (currentVoltage <= voltageThreshold && servo4Activated) {
-    Serial.println("Servo 4: RELEASE!");
     digitalWrite(onboardLED, LOW);
     myServo4.write(servoMin4);
     servo4Activated = false;
@@ -117,17 +109,16 @@ void loop() {
 
   // Control servo5 based on the voltage reading
   if (currentVoltage > voltageThreshold && !servo5Activated) {
-    Serial.println("Servo 5: CONTRACTION!");
     digitalWrite(onboardLED, HIGH);
-    int servoAngle5 = map(currentVoltage, voltageThreshold, 1023, servoMin5, servoMax5);
+    int servoAngle5 = map(currentVoltage, 0, 1023, servoMin5, servoMax5);
     myServo5.write(servoAngle5);
     servo5Activated = true;
   } else if (currentVoltage <= voltageThreshold && servo5Activated) {
-    Serial.println("Servo 5: RELEASE!");
     digitalWrite(onboardLED, LOW);
     myServo5.write(servoMin5);
     servo5Activated = false;
   }
 
-  delay(10); // Optional delay for smoother servo movement
+  delay(1000); // Optional delay for smoother servo movement
+  exit(0); // Functions only on button-press (keeps things smooth for a test)
 }
