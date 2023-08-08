@@ -16,8 +16,13 @@ function App() {
 
   return (
     <div>
-      <Banner aboutPage={<AboutMe />} installPage={<Install />} activePage={activePage} />
-      {activePage === 'about' ? <AboutMe /> : (activePage === 'install' ? <Install /> : <Content />)}
+      <Banner
+        aboutPage={<AboutMe />}
+        installPage={<Install />}
+        activePage={activePage}
+        setActivePage={setActivePage} // Pass setActivePage as a prop
+      />
+      {activePage === 'about' ? <AboutMe /> : <Content />}
       <Footer />
     </div>
   );

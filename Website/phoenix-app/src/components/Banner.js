@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../Banner.css';
 import logo from '../logo_clear.png';
 
-const Banner = ({ aboutPage, installPage, activePage }) => {
+const Banner = ({ aboutPage, installPage, activePage, setActivePage }) => {
   const [userAnswer, setUserAnswer] = useState('');
   const [allAnswers, setAllAnswers] = useState([]);
 
