@@ -2,13 +2,36 @@ import React, { useState } from 'react';
 import '../Banner.css';
 import logo from '../logo_clear.png';
 
-const Banner = ({ aboutPage }) => {
+const Banner = ({ aboutPage, installPage, activePage }) => {
   const [userAnswer, setUserAnswer] = useState('');
   const [allAnswers, setAllAnswers] = useState([]);
-  const [activePage, setActivePage] = useState('home'); // Default active page is 'home'
 
   const handleUserAnswer = () => {
-    // ... (your existing code to handle user answers)
+    if (userAnswer.trim() !== '') {
+      fetch('http://localhost:3001/api/answers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ answer: userAnswer }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok.');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data); // Optional: Log the response from the backend
+          setAllAnswers((prevAnswers) => [...prevAnswers, userAnswer]);
+          setUserAnswer('');
+        })
+        .catch((error) => {
+          console.error('Error:', error.message);
+        });
+    } else {
+      console.log('Error: Answer cannot be empty.');
+    }
   };
 
   const handlePageChange = (page) => {
@@ -22,7 +45,7 @@ const Banner = ({ aboutPage }) => {
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Browse</a></li>
-        <li><a href="#">Install</a></li>
+        <li><a href="#" onClick={() => handlePageChange('install')}>Install</a></li>
         <li><a href="#" onClick={() => handlePageChange('about')}>About</a></li>
         <li><a href="#">Account</a></li>
       </ul>
@@ -32,8 +55,18 @@ const Banner = ({ aboutPage }) => {
       <ul>
         <li><a href="#" onClick={() => handlePageChange('home')}>Home</a></li>
         <li><a href="#">Browse</a></li>
-        <li><a href="#">Install</a></li>
+        <li><a href="#" onClick={() => handlePageChange('install')}>Install</a></li>
         <li><a href="#">About</a></li>
+        <li><a href="#">Account</a></li>
+      </ul>
+    );
+  } else if (activePage === 'install') {
+    submenuContent = (
+      <ul>
+        <li><a href="#" onClick={() => handlePageChange('home')}>Home</a></li>
+        <li><a href="#">Browse</a></li>
+        <li><a href="#">Install</a></li>
+        <li><a href="#" onClick={() => handlePageChange('about')}>About</a></li>
         <li><a href="#">Account</a></li>
       </ul>
     );
@@ -68,7 +101,8 @@ const Banner = ({ aboutPage }) => {
           </button>
         </div>
       </div>
-      {activePage === 'about' && aboutPage} {/* Render AboutMe component when activePage is 'about' */}
+      {activePage === 'about' && aboutPage}
+      {activePage === 'install' && installPage} {/* Render Install component when activePage is 'install' */}
     </div>
   );
 };
