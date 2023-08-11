@@ -17,7 +17,6 @@ function App() {
   return (
     <div>
       <Banner
-        aboutPage={<AboutMe />}
         installPage={<Install />}
         activePage={activePage}
         setActivePage={setActivePage} // Pass setActivePage as a prop
