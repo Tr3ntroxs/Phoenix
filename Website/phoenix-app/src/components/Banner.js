@@ -87,18 +87,18 @@ const Banner = ({ aboutPage, installPage, activePage, setActivePage }) => {
           />
           <button onClick={handleUserAnswer}>Submit</button>
 
-          <button>
+          
             <svg viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em">
               {/* ... (SVG path data) ... */}
             </svg>
-          </button>
+          
         </div>
         <div className="night">
-          <button>
+          
             <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
               {/* ... (SVG path data) ... */}
             </svg>
-          </button>
+          
         </div>
       </div>
       {activePage === 'about' && aboutPage}

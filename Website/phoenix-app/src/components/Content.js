@@ -15,11 +15,11 @@ const Content = ({ activePage }) => {
   return (
     <div className="content">
       <div>
-        <h1>{activePage === 'home' ? 'Second Chances' : 'About Page Title'}</h1>
+        <h1>{activePage === 'home' ? 'Second Chances' : 'About Phoenix Bionics'}</h1>
         <p>
           {activePage === 'home'
             ? 'Powered by Arduino ELEGOO and designed through Onshape, Phoenix will lend more than just a hand...'
-            : 'Content for the About page'}
+            : 'Our mission is to make sure that prosthetics are affordable for everyone!'}
         </p>
       </div>
 
