@@ -17,6 +17,7 @@ void setup() {
 
   servo.attach(servoPin);
   servo.write(90); // Initial position of the servo (adjust as needed)
+  Serial.begin(9600);
 }
 
 void setLEDColor(int redValue, int greenValue, int blueValue) {
@@ -50,5 +51,6 @@ void loop() {
   } else {
     setLEDColor(255, 0, 0); // Red (Servo inactive)
   }
+  delay(500);
   // Add any other code related to servo control or input handling here
 }
