@@ -5,6 +5,7 @@ import Banner from './components/Banner';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import AboutMe from './components/AboutMe';
+import Install from './components/Install'; // Import the Install component
 
 function App() {
   const [activePage, setActivePage] = useState('home'); // Default active page is 'home'
@@ -15,7 +16,11 @@ function App() {
 
   return (
     <div>
-      <Banner aboutPage={<AboutMe />} onPageChange={handlePageChange} />
+      <Banner
+        installPage={<Install />}
+        activePage={activePage}
+        setActivePage={setActivePage} // Pass setActivePage as a prop
+      />
       {activePage === 'about' ? <AboutMe /> : <Content />}
       <Footer />
     </div>
