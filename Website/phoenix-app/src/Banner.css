@@ -1,19 +1,22 @@
-/* Banner-specific styles */
-.banner {
+  /* Banner-specific styles */
+  .banner {
     background-color: #f2f2f2;
     padding: 20px;
   }
+
+  /* Logo */
+  .logo {
+    height: 100px;
+  }
   
+  /* Submenu formatting */
   .submenus {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .logo {
-    height: 100px;
-  }
-  
+  /* Submenu styling */
   ul {
     list-style: none;
     display: flex;
@@ -33,9 +36,32 @@
   }
   
   a:hover {
-    color: #ff0000;
+    color: crimson;
+  }
+
+  /* Submenu animation: bar */
+  .submenus li {
+    position: relative;
+    list-style: none;
+  }
+
+  .submenus li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+  }
+
+  .submenus li:hover::after {
+    width: 100%;
+    background: crimson;
   }
   
+  /* Search bar styling */
   .search-bar {
     padding: 8px;
     border: 1px solid #ccc;
@@ -43,6 +69,7 @@
     width: 200px;
   }
   
+  /* Search bar button styling */
   button {
     background-color: #ff0000;
     color: white;
@@ -56,6 +83,7 @@
     background-color: #cc0000;
   }
   
+  /* Night mode */
   .night button {
     background-color: #333;
   }

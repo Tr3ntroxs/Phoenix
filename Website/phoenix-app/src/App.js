@@ -7,7 +7,8 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import AboutMe from './components/AboutMe';
 import Install from './components/Install';
-// import Account from './components/Account';
+import Account from './components/Account';
+import Browse from './components/Browse';
 
 function App() {
   const [activePage, setActivePage] = useState('home'); // Default active page is 'home'
@@ -24,11 +25,10 @@ function App() {
         setActivePage={setActivePage} // Pass setActivePage as a prop
       />
       {activePage === 'home' ? <Content /> : null}
-      {/* {activePage === 'browse' ? <Browse /> : null} */}
+      {activePage === 'browse' ? <Browse /> : null}
       {activePage === 'about' ? <AboutMe /> : null}
       {activePage === 'install' ? <Install /> : null}
-      {/* {activePage === 'account' ? <Account /> : null} */}
-      {/* {activePage === 'account' ? <Account /> : <Content />} */}
+      {activePage === 'account' ? <Account /> : null}
       <Footer />
     </div>
   );

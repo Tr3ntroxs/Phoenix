@@ -94,8 +94,6 @@ const Banner = ({ aboutPage, installPage, activePage, setActivePage }) => {
           
         </div>
       </div>
-      {activePage === 'about' && aboutPage}
-      {activePage === 'install' && installPage} {/* Render Install component when activePage is 'install' */}
     </div>
   );
 };

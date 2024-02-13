@@ -1,9 +1,27 @@
 .footer {
-    background-color: #333;
+    background-color: #1b1b1b;
     color: #fff;
     padding: 20px;
     text-align: center; /* Center the content horizontally */
     position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .footer-item h3{
+    padding: 16px;
+    color: whitesmoke;
+    margin-top: 12px;
+    position: relative;
+  }
+  
+  .footer-item h3::after{
+    content: '';
+    height: 0.5px;
+    width: 60%;
+    background: #ffffff;
+    position: absolute;
+    left: 20%;
+    bottom: 10px;
   }
   
   .footer-content {
@@ -37,11 +55,15 @@
   .footer-col a {
     color: #fff;
     text-decoration: none;
+    letter-spacing: 1px;
     font-size: 12px;
   }
   
   .footer-col a:hover {
+    color: crimson;
     text-decoration: underline;
+    letter-spacing: 3px;
+    transition: 0.4s;
   }
   
   .footer-col button {
