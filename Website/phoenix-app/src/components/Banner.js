@@ -40,37 +40,30 @@ const Banner = ({ aboutPage, installPage, activePage, setActivePage }) => {
 
   // Render different submenus based on the activePage state
   let submenuContent;
-  if (activePage === 'home') {
-    submenuContent = (
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Browse</a></li>
-        <li><a href="#" onClick={() => handlePageChange('install')}>Install</a></li>
-        <li><a href="#" onClick={() => handlePageChange('about')}>About</a></li>
-        <li><a href="#">Account</a></li>
-      </ul>
-    );
-  } else if (activePage === 'about') {
-    submenuContent = (
-      <ul>
-        <li><a href="#" onClick={() => handlePageChange('home')}>Home</a></li>
-        <li><a href="#">Browse</a></li>
-        <li><a href="#" onClick={() => handlePageChange('install')}>Install</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Account</a></li>
-      </ul>
-    );
-  } else if (activePage === 'install') {
-    submenuContent = (
-      <ul>
-        <li><a href="#" onClick={() => handlePageChange('home')}>Home</a></li>
-        <li><a href="#">Browse</a></li>
-        <li><a href="#">Install</a></li>
-        <li><a href="#" onClick={() => handlePageChange('about')}>About</a></li>
-        <li><a href="#">Account</a></li>
-      </ul>
-    );
-  }
+  submenuContent = (
+    <ul>
+    {activePage === 'home' ? 
+    <li><a href="#">Home</a></li> :
+    <li><a href="#" onClick={() => handlePageChange('home')}>Home</a></li>
+    }
+    {activePage === 'browse' ? 
+    <li><a href="#">Browse</a></li> :
+    <li><a href="#" onClick={() => handlePageChange('browse')}>Browse</a></li>
+    }
+    {activePage === 'install' ? 
+    <li><a href="#">Install</a></li> :
+    <li><a href="#" onClick={() => handlePageChange('install')}>Install</a></li>
+    }
+    {activePage === 'about' ? 
+    <li><a href="#">About</a></li> :
+    <li><a href="#" onClick={() => handlePageChange('about')}>About</a></li>
+    }
+    {activePage === 'account' ? 
+    <li><a href="#">Account</a></li> :
+    <li><a href="#" onClick={() => handlePageChange('account')}>Account</a></li>
+    }
+    </ul>
+  );
 
   return (
     <div className="banner">
