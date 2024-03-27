@@ -1,8 +1,0 @@
-July 11th, 2023:
-Output used - ENV
-ENV is a combination of the RAW and RECT outputs, which will likely give us the most
-accurate info for testing.
-
-As shown in image, sensor was placed on forearm. Output did indicate responsiveness, but
-different spots may need to be tried for better effect. Will test this on prototype build
-of finger next time.
