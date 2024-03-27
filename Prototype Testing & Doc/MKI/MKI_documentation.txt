@@ -1,0 +1,6 @@
+Created a carboard cutout of a simple hand with folds tied to servo motors fixed 
+in place at the base of the hand for testing servos and general design principles.
+
+Design was a suprising success for a simple hand model. Continuing this into 3D next time.
+https://www.youtube.com/watch?v=jUkD4WNIXuk
+

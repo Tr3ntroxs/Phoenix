@@ -1,24 +1,18 @@
 **REPO UPDATE**
 
-- All website material will be hosted here for the time being
+- CAD has been moved to a Google drive as files are heavy and don't see many
+changes in the repo once uploaded
 - All programmed tests and provided logs and images for documentation
-have been moved to the drive
+have been copied to the drive, but will remain on Github as open-source
+material and for later reference
+- File structure for tests changed
 
 These changes have been made to cleanup the repo and to better navigate the
-past prototypes, documentation and testing.
+past prototypes, documentation and testing, as well as closing down CAD for
+revision.
 
-Documentation was initially going to be the only move from the repo to the drive, 
-but because the code is important for understanding and running the respective tests, 
-the drive will hold those tests as well to prevent confusion from splitting up the files
-between the repo and drive.
-
-Additionally, these tests don't see many iterative changes since they
-are running smaller circuits/prototypes, so there would be no benefit to hosting
-those files on Github if they are not subjected to change over time.
-
-For now, the drive will host all documentation and testing for hardware, while
-the repo will be mainly used for the website. We may host this documentation
-on a separate website or repo dedicated to documentation, but for the time 
-being the repo will host prototypes and code deemed to be "final."
+For now, the drive will host most files and be considered a comprehensive 
+private portfolio, while the repo will be mainly used for website, testing, 
+and as a timeline for changes in code and documentation that may remain open-source.
 
 LINK TO DRIVE IS PROVIDED IN DISCORD

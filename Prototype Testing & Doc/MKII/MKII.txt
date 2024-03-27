@@ -1,0 +1,9 @@
+Moving on to more component pieces, we tested 3D finger designs. We came up with a parallel board design with spacers in the middle
+acting as pulleys to contract the finger. The finger had to conceal the string to hold objects and the servo was repositioned
+to the back of the hand to allow objects to be held in the palm.
+
+Currently testing finger design and will move onto actual wood fingers next time. 
+https://www.youtube.com/watch?v=GTH_Tzg1DmA
+
+Eventually, replicable parts will be modeled in CAD and laser cut from cardboard to the correct dimensions and fit for fast 
+and effecient repairs and production scalability. Materials can be then switched wood later. 

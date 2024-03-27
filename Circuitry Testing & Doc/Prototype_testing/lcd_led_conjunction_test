@@ -1,0 +1,46 @@
+#include <LiquidCrystal.h>
+
+/*
+https://www.youtube.com/watch?v=IM3d0dlAOJk is the original link I used, with a few changes.
+5V to -
+GND to +
+VSS parallel to -
+VDD parallel to +
+V0 in pin 13
+RS in pin 12
+RW parallel to -
+E in pin 11
+D4 in pin 4
+D5 in pin 5
+D6 in pin 6
+D7 in pin 7
+LED- to GND
+LED+ to pin 8
+A to -
+K to +
+*/
+
+int contrast = 100;
+LiquidCrystal lcd(12, 11, 4, 5, 6, 7);
+int led_pin = 8;
+int led_value = 0;
+
+void setup() {
+  lcd.begin(16, 2);
+  analogWrite(13, contrast);
+  pinMode(led_pin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(led_pin, random(0,2));
+  led_value = digitalRead(led_pin);
+  lcd.setCursor(0,0);
+  if (led_value == 0) {
+    lcd.print("ON");
+  }
+  else if (led_value == 1) {
+    lcd.print("OFF");
+  }
+  
+  delay(1000);
+}
